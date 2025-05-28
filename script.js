@@ -1,5 +1,6 @@
 let wallet = 10; // Initial wallet amount
 let oldWallet = wallet; // Store the initial wallet amount for animation
+const wompAudio = new Audio('sounds/womp_womp.pm3');
 
 function animateWallet(from, to, duration = 1000) {
     const element = document.getElementById('wallet');
@@ -69,6 +70,7 @@ function compareResults(playerPickList, draw) {
 function playGame() {
     if (wallet < 2) {
         alert("You don't have enough money to play!");
+        wompAudio.play();
         return;
     }
 
@@ -96,7 +98,10 @@ function playGame() {
 
     if (wallet < 2) {
         alert("You don't have enough money to play again!");
+        wompAudio.play();
     }
+    if (winnings ===0) {
+        wompAudio.play();
 
     for (let i = 1; i <= 5; i++) {
         document.getElementById('pick' + i).value = ''; // Clear input fields
