@@ -79,6 +79,7 @@ function playGame() {
     
     wallet -= 2;
     animateWallet(oldWallet, wallet, 1000);
+    oldWallet = wallet;
 
 
     const draw = lottoDraw();
@@ -88,6 +89,7 @@ function playGame() {
     const winnings = compareResults(playerPickList, draw);
     wallet += winnings;
     animateWallet(oldWallet, wallet, 1000);
+    oldWallet = wallet;
 
 
     document.getElementById("result").textContent = `You picked: ${playerPickList.join(', ')}`;
@@ -96,12 +98,10 @@ function playGame() {
     triggerAnimation("winnings");
     document.getElementById("wallet").textContent = wallet;
 
-    if (wallet < 2) {
-        alert("You don't have enough money to play again!");
+    if (wallet < 2 || winnings ===0) {
         wompAudio.play();
     }
-    if (winnings ===0) {
-        wompAudio.play();
+    
 
     for (let i = 1; i <= 5; i++) {
         document.getElementById('pick' + i).value = ''; // Clear input fields
