@@ -1,0 +1,107 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1000px;
+  margin: 50px auto;
+  background: linear-gradient(135deg, #b483db 0%, #592288 100%);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #d3c3dd;
+}
+
+.wallet-display {
+  background-color: rgba(255, 255, 255, 0.15); /* light glass effect */
+  padding: 15px 25px;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  backdrop-filter: blur(5px);
+}
+
+h1 {
+  text-align: center;
+  color: #ebe7ed;
+  text-shadow: 1px 1px 4px #3f0b4c;
+  margin-bottom: 30px;
+  font-size: 2.0rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #ebe7ed;
+  text-align: center;
+}
+
+input[type=number] {
+  width: 60px;
+  padding: 8px;
+  margin: 0 5px 15px 0;
+  border-radius: 6px;
+  border: 1.5px solid #980ad9;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center; 
+  align-items: center;      
+  gap: 10px;                
+  flex-wrap: wrap;         
+  margin: 20px 0;          
+}
+input[type=number]:focus {
+  outline: none;
+  border-color: #b01f7f;
+  box-shadow: 0 0 8px #45043f;
+}
+
+button {
+  background-color: #c090d3;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-right: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background-color: #3f0f66;
+  transform: scale(1.05);
+}
+button:active {
+  transform: scale(0.95);
+}
+
+#draw, #result, #winnings {
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#draw, #result, #winnings {
+  opacity: 0;
+  transition: none; /* Disable sudden jumps */
+}
+
+.show {
+  animation: fadeIn 0.7s ease-out forwards;
+}
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lottoaway</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Ready to Gamble?</h1>
+        <p>Welcome to lottoaway! Spend fake money so you don't empty your real wallet!</p>
+        <div class="wallet-display">
+            💰 Wallet Balance: $<span id="wallet">10</span>
+        </div>
+        <div>
+            <h2>How to Play</h2>
+            <p>Pick 5 numbers between 1 and 50. If you match all 5, you win $1000!</p>
+            <p>Match 4 numbers: $100</p>
+            <p>Match 3 numbers: $10</p>
+            <p>Match 2 numbers: $2</p>
+        </div>
+
+        <h2>Your Picks</h2>
+        <p>Enter your 5 numbers below:</p>
+        <div class="input-group">
+            <label for="pick1">Pick 1:</label>
+            <input type="number" id="pick1" min="1" max="50">
+            <label for="pick2">Pick 2:</label>
+            <input type="number" id="pick2" min="1" max="50">
+            <label for="pick3">Pick 3:</label>
+            <input type="number" id="pick3" min="1" max="50">
+            <label for="pick4">Pick 4:</label>
+            <input type="number" id="pick4" min="1" max="50">
+            <label for="pick5">Pick 5:</label>
+            <input type="number" id="pick5" min="1" max="50">
+            <br><br>
+        </div>
+  
+        <button onclick="playGame()">Play ($2)</button>
+        <button onclick="quitGame()">Quit</button>
+
+        <p id="draw"></p>
+        <p id="result"></p>
+        <p id="winnings"></p>
+
+        <script src = "script.js"></script>
+    </body>   
+</html>
