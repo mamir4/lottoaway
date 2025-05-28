@@ -1,6 +1,6 @@
 let wallet = 10; // Initial wallet amount
 let oldWallet = wallet; // Store the initial wallet amount for animation
-const wompAudio = new Audio('sounds/womp_womp.pm3');
+const wompAudio = new Audio('sounds/womp_womp.mp3');
 
 function animateWallet(from, to, duration = 1000) {
     const element = document.getElementById('wallet');
