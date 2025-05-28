@@ -79,7 +79,6 @@ function playGame() {
     
     wallet -= 2;
     animateWallet(oldWallet, wallet, 1000);
-    oldWallet = wallet;
 
 
     const draw = lottoDraw();
@@ -89,7 +88,6 @@ function playGame() {
     const winnings = compareResults(playerPickList, draw);
     wallet += winnings;
     animateWallet(oldWallet, wallet, 1000);
-    oldWallet = wallet;
 
 
     document.getElementById("result").textContent = `You picked: ${playerPickList.join(', ')}`;
